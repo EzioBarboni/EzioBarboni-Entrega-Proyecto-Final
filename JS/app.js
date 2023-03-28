@@ -19,11 +19,11 @@ if (window.location.href.includes('abrigos')) matches = ['campera'];
 if (window.location.href.includes('conjuntos')) matches = ['buzo', 'Joggin', 'chupin'];
 if (window.location.href.includes('zapas')) matches = ['zapatilla'];
 
-fetch('JS/stock1.json')
+fetch('./JS/stock.json')
     .then((resp) => resp.json())
     .then((data) => {
         stock = data;
-
+ 
         // Filter out
         stock = stock.filter((p) => matches.includes(p.tipo));
             
